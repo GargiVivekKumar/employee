@@ -39,7 +39,7 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
     }
 
-    @GetMapping(value="employee/address/{id}")
+    @GetMapping(value="/employee/address/{id}")
     public ResponseEntity<AddressDTO> getEmployeeAddress(@PathVariable("id") Long id){
      return restClient.getEmployeeAddress(id);
     }

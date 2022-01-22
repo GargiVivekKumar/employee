@@ -15,7 +15,7 @@ public class RestClient {
     private RestTemplate restTemplate;
 
     public ResponseEntity<AddressDTO> getEmployeeAddress(Long empId){
-       return restTemplate.getForEntity("localhost:8080/rest/v1/address/{empId}",AddressDTO.class,new HttpEntity<>(empId,getHeaders()));
+       return restTemplate.getForEntity("http://localhost:8080/rest/v1/address/"+empId,AddressDTO.class,new HttpEntity<>(empId,getHeaders()));
     }
 
     private HttpHeaders getHeaders(){
